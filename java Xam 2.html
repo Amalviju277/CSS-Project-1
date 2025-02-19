@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>lottery project</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body style="margin: 50px; text-align: center;">
+	<h1>LOTTERY DRAW !!</h1>
+	<p>Click the button to select the winner of the lottery..</p>
+
+
+	<button id="press"type="button"data-toggle="modal"data-target="#content">CLICK TO DRAW..</button>
+   
+   
+    		<div class="modal fade"id="content">
+    			<div class="modal-dialog">
+    				<div class="modal-content">
+    					<div class="modal-header">
+    						<h2 class="modal-title">CONGRATULATIONS!! !!</h2>
+    						<button type="button" data-dismiss="modal"class="close">&times</button>
+    					</div>
+    					<div class="modal-body"id="winner">
+    					</div>
+    					<div class="modal-footer">
+    						<button type="button"class="btn btn-danger"data-dismiss="modal">Close</button>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+        </div>
+
+        <!--display winner on HTML Page-->
+        <p id="demo" style="color:red;"data-toggle="modal"data-target="#content"></p>
+
+	<script type="text/javascript">
+		
+		function display(){
+
+			var lottery=[23401,23402,23403,23404,23405,23406];		
+			var x=Math.floor(Math.random()*lottery.length);
+			
+			console.log("Congrats to "+lottery[x]+ " for winning the contest");
+			document.getElementById("demo").innerHTML=lottery[x]+" is choosen";
+			document.getElementById("winner").innerHTML="congratulations the selected winner of the lottery number is "+lottery[x];
+
+	    }    
+	    document.getElementById("press").addEventListener('click', display);
+	
+
+	</script>
+
+</body>
+</html>

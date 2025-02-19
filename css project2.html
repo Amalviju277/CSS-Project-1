@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Project 2</title>
+	
+	<style type="text/css">
+	  *{
+	  	margin:0;
+	  	padding:0;
+	  	
+	  }body{
+	  	display: flex;
+	  }h1{
+	  	font-family: sans-serif;
+	  	padding: 20px;
+	  }
+	  .left{
+	  	 	background: linear-gradient(to bottom,#cbc3e3,bisque);
+	  	 	height: 710px;
+	  	 	width:50%;
+	  	 	float: left;
+	  	 	
+           }
+     form{
+     	  	
+     		width:50%;
+           	margin: 200px;
+     		
+       }label{
+       	   line-height:2;
+       	   font-family:sans-serif;
+       }
+       
+     input[type="password"],input[type="email"]{
+     	padding: 5px;
+     	width:350px;   
+     }button{
+     	font-family: fantasy;
+     	padding:5px;
+     	width:365px;
+     	background: rgb(247,96, 79);
+     	color: white;
+     	border:none ;
+     	cursor: pointer;
+     }
+     .right{
+     	width:50%;
+     }
+     @media all and (max-width:600px){
+     	.left{
+     		display: none;
+     	}.right{
+     		display: inline-flex;
+     		align-items: justify;
+     		
+     		}
+     }
+
+     	
+	</style>
+</head>
+<body>
+ <div class="left"> </div>
+
+ <div class="right">
+ 	<form>
+ 		<h1 style="color:rgb(247,96,79);">Login Form</h1>
+ 		<label for="mail">Email</label><br>
+		<input type="Email" id="mail"name="email"><br>
+ 		<label for="pass">Password</label><br>
+ 		<input  type="password"id="pass" name="password"><br>
+ 		<input type="checkbox"id="check">
+ 		<label for="check"style="font-family:san-serif;font-weight: lighter;">Remember me</label><br>
+ 		<button>Login</button> 
+ 	</form>
+</div>
+
+</body>
+</html>
